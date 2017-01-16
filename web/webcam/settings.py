@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -24,7 +23,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.29.190']
 
 
 # Application definition
@@ -89,7 +88,9 @@ PREFIX = r'webcam/'
 
 STATIC_URL = '/' + PREFIX + 'static/'
 
+print BASE_DIR
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+print TEMPLATE_DIRS
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "tmp", "recordings"),

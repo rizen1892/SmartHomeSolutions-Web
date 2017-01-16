@@ -6,6 +6,11 @@ locks_path = os.path.join(
                           "app",
                           "locks.py")
 
+print locks_path
+print locks_path
+print locks_path
+print locks_path
+
 locks = imp.load_source("locks", locks_path)
 
 

@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from home.models import get_movements
 from home.models import get_movement
-from django.core.servers.basehttp import FileWrapper
 from django.http import StreamingHttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from wsgiref.util import FileWrapper
 
 
 def home(request):
