@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Raspberry Pi Web Camera
 
 Raspberry Pi Web Camera is web camera build on Raspberry Pi 2 which uses Raspberry Pi Camera.
@@ -91,3 +92,6 @@ GNU GENERAL PUBLIC LICENSE
 [Simplex]:https://bootswatch.com/simplex/
 [PIL]:http://www.pythonware.com/products/pil/
 
+=======
+# SmartHomeSolutions-Web
+>>>>>>> 2086efb2d00d13f5241629766586b19bbca34353
