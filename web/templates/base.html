@@ -11,7 +11,7 @@
     {% block meta %}{% endblock %}
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Raspberry Pi Web Camera</title>
+    <title>Smart Home Solutions</title>
 
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/webcam.css' %}" rel="stylesheet">
@@ -22,7 +22,7 @@
 
   <body>
   <div class="container">
-    <img src="{% static 'img/logo_128.png' %}">
+    <div class="col-md-4"><p align="left"><img style="padding-top:50px;" src="{% static 'img/Smart_Home_Name.png' %}"></p></div>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -35,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url 'home.views.home' %}">Raspberry Pi Web Camera</a>
+          <p align="left"><a class="navbar-brand" href="{% url 'home.views.home' %}">Smart Home Solutions</a></p>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -43,7 +43,7 @@
             <li class="{% block Home %}{% endblock %}"><a href="{% url 'home.views.home' %}">Home</a></li>
             <li class="{% block Stream %}{% endblock %}"><a href="{% url 'home.views.stream' %}">Live</a></li>
             <li class="{% block Movements %}{% endblock %}"><a href="{% url 'home.views.movements' %}">Movements</a></li>
-            <li class="{% block Configuration %}{% endblock %}"><a href="{% url 'home.views.configuration' %}">Configuration</a></li>
+            <li class="{% block Configuration %}{% endblock %}"><a href="{% url 'home.views.configuration' %}">Control Center</a></li>
            </ul>
            <ul class="nav navbar-nav navbar-right">
             <li class="{% block About %}{% endblock %}"><a href="{% url 'home.views.about' %}">About</a></li>
@@ -54,7 +54,7 @@
       {% block body %}{% endblock %}
     <hr>
     <footer class="footer">
-      <p>&copy; DN 2015</p>
+      <p>Group 16 2017 &copy;</p>
     </footer>
     </div> <!-- /container -->
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>

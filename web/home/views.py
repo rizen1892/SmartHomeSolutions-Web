@@ -6,6 +6,9 @@ from django.http import StreamingHttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from wsgiref.util import FileWrapper
 
+import RPi.GPIO as GPIO
+from django.http import HttpResponse
+
 
 def home(request):
     return render(request, 'home.html')
@@ -86,4 +89,36 @@ def shutdown_pi(request):
     cmd = ["shutdown", "-h", "now"]
     subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
 
+    return redirect('home.views.configuration')
+        
+
+def open_garage(request):
+    import time
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(18,GPIO.OUT)
+    GPIO.output(18,GPIO.HIGH)
+    time.sleep(11)
+    GPIO.output(18,GPIO.LOW)
+    GPIO.cleanup()
+    return redirect('home.views.configuration')
+
+
+def close_garage(request):
+    import time
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(18,GPIO.OUT)
+    GPIO.output(18,GPIO.HIGH)
+    time.sleep(11)
+    GPIO.output(18,GPIO.LOW)
+    GPIO.cleanup()
+    return redirect('home.views.configuration')
+
+def door(request):
+    import time
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(23,GPIO.OUT)
+    GPIO.output(23,GPIO.HIGH)
+    time.sleep(11)
+    GPIO.output(23,GPIO.LOW)
+    GPIO.cleanup()
     return redirect('home.views.configuration')

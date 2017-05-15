@@ -18,5 +18,8 @@ urlpatterns = [
     url(r'^' + settings.PREFIX + r'configuration/restart_app$', myapp.restart_app, name='restart_app'),
     url(r'^' + settings.PREFIX + r'configuration/restart_pi$', myapp.restart_pi, name='restart_pi'),
     url(r'^' + settings.PREFIX + r'configuration/shutdown_pi$', myapp.shutdown_pi, name='shutdown_pi'),
+    url(r'^' + settings.PREFIX + r'configuration/open_garage$', myapp.open_garage, name='open_garage'),
+    url(r'^' + settings.PREFIX + r'configuration/close_garage$', myapp.close_garage, name='close_garage'),
+    url(r'^' + settings.PREFIX + r'configuration/door$', myapp.door, name='door'),
     url(r'^' + settings.PREFIX + r'admin/', include(admin.site.urls)),
 ]
