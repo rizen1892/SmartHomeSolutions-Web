@@ -4,11 +4,15 @@
 {% block Configuration %}active{% endblock %}
 
 {% block body %}
-<h1 class="page-header">Configuration</h1>
-<p class="lead">... to do ...</p>
+
+
 
 <h1 class="page-header">Control Center</h1>
-<button onclick="window.location.href='{% url 'home.views.restart_app' %}'" type="button" class="btn btn-primary" aria-expanded="false">Restart Web Camera</button>
-<button onclick="window.location.href='{% url 'home.views.restart_pi' %}'" type="button" class="btn btn-primary" aria-expanded="false">Restart Raspberry Pi</button>
+<p class="lead">From here you can control the Raspberry Pi</p>
+<button onclick="window.location.href='{% url 'home.views.restart_app' %}'" type="button" class="btn btn-danger" aria-expanded="false">Restart Web Camera</button>
+<button onclick="window.location.href='{% url 'home.views.restart_pi' %}'" type="button" class="btn btn-danger" aria-expanded="false">Restart Raspberry Pi</button>
 <button onclick="window.location.href='{% url 'home.views.shutdown_pi' %}'" type="button" class="btn btn-danger" aria-expanded="false">Shutdown Raspberry Pi</button>
+<button onclick="window.location.href='{% url 'home.views.open_garage' %}'" type="button" class="btn btn-danger" aria-expanded="false">Open Garage Door</button>
+<button onclick="window.location.href='{% url 'home.views.close_garage' %}'" type="button" class="btn btn-danger" aria-expanded="false">Close Garage Door</button>
+<button onclick="window.location.href='{% url 'home.views.door' %}'" type="button" class="btn btn-danger" aria-expanded="false">Open Front Door</button>
 {% endblock %}
